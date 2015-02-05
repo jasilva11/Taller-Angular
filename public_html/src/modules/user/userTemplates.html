@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       <div class='container'>
+    <form role='form' name='userForm' ng-submit="userForm.$valid && userCtrl.save()">
+        <div class='form-group' >
+            <label for='firstName'>Nombres</label>
+            <input type='text' class='form-control' id='firstName' placeholder='Enter value' ng-model="user.firstName" required/>
+        </div>
+        <div class='form-group' >
+            <label for='lastName'>Apellidos</label>
+            <input type='text' class='form-control' id='lastName' placeholder='Enter value' ng-model="user.lastName" required/>
+        </div>
+         <div class="input-append date" id="calendario" data-date="2015-01-31" data-date-format="dd-mm-yyyy">
+            <label for='calendario'>Fecha de nacimiento</label> 
+            <input class="span2" size="16" type="date" value="2015-01-31" data-date-format="dd-mm-yyyy" calendario. ng-model="user.calendario" required>
+            <span class="add-on"><i class="icon-th"></i></span>
+        </div>
+        <div class="row">
+            <div class ="col-sm-4 col-sm-offset-4" id="msj">
+            </div>
+        </div>
+        <input type="submit" value="Guardar" class='btn btn-primary'/>
+        <input type="reset" value="Cancelar" class='btn btn-default'/>
+    </form>
+</div>
+    </body>
+</html>
